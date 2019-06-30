@@ -1,0 +1,31 @@
+Static - An attribute that is static belongs to the class and not to an instance of a class
+
+    public class Customer {
+        static String staticField1;
+    }
+
+
+    Customer.staticField1 = "value";
+
+    System.out.println(Customer.staticField1);
+
+========================================================================================================================
+
+Non-static Java fields are located in the instances of the class.
+
+
+    public class Customer {
+        String field1;
+    }
+
+    Customer customer = new Customer();
+
+    customer.field1 = "value";
+
+    System.out.println(customer.field1);
+
+========================================================================================================================
+
+Final - Basically a constant Value
+
+http://tutorials.jenkov.com/java/fields.html#java-field-access-modifiers

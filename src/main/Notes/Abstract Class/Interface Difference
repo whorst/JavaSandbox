@@ -1,0 +1,35 @@
+-Java interfaces are used to decouple the interface of some component from the implementation.
+In other words, to make the classes using the interface independent of the classes implementing the interface.
+Thus, you can exchange the implementation of the interface, without having to change the class using the interface.
+
+
+-If you need to separate an interface from its implementation, use an interface.
+If you also need to provide a base class or default implementation of the interface,
+add an abstract class (or normal class) that implements the interface.
+
+-http://tutorials.jenkov.com/java/interfaces-vs-abstract-classes.html
+------------------------------------------------------------------------------------------------------------------------
+
+-Abstract Classes are more expensive to use because they are classes
+
+Abstract classes can have constants, members, method stubs (methods without a body) and defined methods,
+whereas interfaces can only have constants and methods stubs.
+
+Methods and members of an abstract class can be defined with any visibility,
+whereas all methods of an interface must be defined as public (they are defined public by default).
+
+When inheriting an abstract class, a concrete child class must define the abstract methods,
+whereas an abstract class can extend another abstract class and abstract methods from
+the parent class don't have to be defined.
+
+Similarly, an interface extending another interface is not responsible for
+implementing methods from the parent interface. This is because interfaces cannot define any implementation.
+
+A child class can only extend a single class (abstract or concrete),
+whereas an interface can extend or a class can implement multiple other interfaces.
+
+A child class can define abstract methods with the same or less restrictive visibility,
+whereas a class implementing an interface must define the methods with the exact same visibility (public).
+
+-https://stackoverflow.com/questions/1913098/what-is-the-difference-between-an-interface-and-abstract-class
+-http://www.dotnetbull.com/2011/11/difference-between-abstract-class-and.html

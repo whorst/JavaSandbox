@@ -1,0 +1,6 @@
+Default - Visible to the package. No modifiers are needed.
+Private - Visible to the class only.
+public - Visible to the world.
+protected - Visible to the package and all subclasses.
+
+https://www.tutorialspoint.com/java/java_access_modifiers.htm
