@@ -2,6 +2,8 @@ import AbstractClass.AbstractSubClass;
 import Interface.InterfaceImplementation;
 import Generics.*;
 import CollectionsTest.*;
+import Lambdas.*;
+import Streams.Streams;
 
 public class main {
     public static void main(String[] args) throws InstantiationException, IllegalAccessException {
@@ -10,8 +12,8 @@ public class main {
 //        genericsTest();
 //        collectionsIteratorTest();
 //        collectionsIterableTest();
-        collectionsTest();
-
+//        collectionsTest();
+        streamTest();
     }
 
     public static void abstractClassTest(){
@@ -44,6 +46,16 @@ public class main {
     public static void collectionsTest(){
         RegularCollections regCol = new RegularCollections();
 //        regCol.addToCollection("Adding To Collection");
-        regCol.transferElementsFromOneCollectionToAnother();
+//        regCol.transferElementsFromOneCollectionToAnother();
+        regCol.listComparableInterface();
+//        regCol.listComparator();
+    }
+    public static void lambdaTest(){
+        AnonymousInterfaces lambdas = new AnonymousInterfaces();
+    }
+
+    public static void streamTest(){
+        Streams stream = new Streams();
+        stream.nonterminalChainedStreams();
     }
 }

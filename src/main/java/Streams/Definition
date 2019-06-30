@@ -1,0 +1,30 @@
+
+-Streams are an abstraction that represents a sequence of something (usually characters).
+It provides a consistent interface for interacting with that sequence regardless of whether the sequence is the console,
+ a file, a network connection, etc.
+
+https://javaconceptoftheday.com/collections-and-streams-in-java/
+
+-Streams are synchronous
+-Streams dont perform operations of the data source, they return a result
+-Streams can be traversed only once, and you have to make a stream, kind of like an iterator
+-streams are lazily constructed i.e intermediate operations are not evaluated until terminal operation is invoked.
+
+
+https://jaxenter.com/java-performance-tutorial-how-fast-are-the-java-8-streams-118830.html
+
+-Streams were originally invented to make parallelism more available for devs
+-Streams are slower on primitive data types
+-generally, streams are slower than for loops on arrays
+-Streams can be parallelized
+    Arrays.stream(ints)
+              .reduce(Integer.MIN_VALUE, Math::max);
+
+    int m = Arrays.stream(ints).parallel()
+              .reduce(Integer.MIN_VALUE, Math::max);
+
+
+http://tutorials.jenkov.com/java-functional-programming/streams.html
+-A non-terminal stream operation is an operation that adds a listener to the stream without doing anything else.
+-A terminal stream operation is an operation that starts the internal iteration of the elements, calls all the listeners, a
+nd returns a result.
