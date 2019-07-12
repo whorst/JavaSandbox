@@ -4,5 +4,8 @@ package Lambdas;
 
 public class Lambdas {
 
+    public void LambdaTest() {
+//        int param = 12;
+    }
 
 }

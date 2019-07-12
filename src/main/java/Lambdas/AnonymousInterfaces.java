@@ -14,13 +14,16 @@ public class AnonymousInterfaces {
         Boolean operation(int a, int b);
     }
     public interface Finder {
-        public int find(String s1, String s2);
+        int find(String s1, String s2);
     }
 
     public void  lambdaInterfaceOperations(){
         LambdaInterface add = (int x, int y) -> x+y;
         LambdaInterface subtract = (int x, int y) -> x-y;
         LambdaInterface multiply = (int x, int y) -> x*y;
+
+        //The below is to run the anonymous interface
+        System.out.println(add.operation(1,2));
     }
 
     public void lambdaFunctionReturns() {
@@ -28,6 +31,4 @@ public class AnonymousInterfaces {
             return a > b;
         };
     }
-
-    Finder finder = (s1, s2) -> s1.indexOf(s2);
 }

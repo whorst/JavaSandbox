@@ -3,7 +3,10 @@ import Interface.InterfaceImplementation;
 import Generics.*;
 import CollectionsTest.*;
 import Lambdas.*;
-import Streams.Streams;
+import Streams.NonterminalStreams;
+import Streams.TerminalStreams;
+
+//http://tutorials.jenkov.com/java-functional-programming/streams.html
 
 public class main {
     public static void main(String[] args) throws InstantiationException, IllegalAccessException {
@@ -13,7 +16,9 @@ public class main {
 //        collectionsIteratorTest();
 //        collectionsIterableTest();
 //        collectionsTest();
-        streamTest();
+//        lambdaTest();
+//        nonterminalStreamTest();
+        terminalStreamTest();
     }
 
     public static void abstractClassTest(){
@@ -27,22 +32,22 @@ public class main {
         IntImp.myInterfaceMethod();
         IntImp.myOtherInterfaceMethod();
     }
+
     public static void genericsTest() throws IllegalAccessException, InstantiationException {
         Generic gen = new Generic();
         gen.typeInference();
         gen.genericMethods();
         gen.genericClasses();
     }
-
     public static void collectionsIteratorTest(){
         CollectionsIterator ci = new CollectionsIterator();
         ci.listIterator();
     }
+
     public static void collectionsIterableTest(){
         CollectionsIterable cib = new CollectionsIterable();
         cib.listIteraable();
     }
-
     public static void collectionsTest(){
         RegularCollections regCol = new RegularCollections();
 //        regCol.addToCollection("Adding To Collection");
@@ -50,12 +55,23 @@ public class main {
         regCol.listComparableInterface();
 //        regCol.listComparator();
     }
+
     public static void lambdaTest(){
         AnonymousInterfaces lambdas = new AnonymousInterfaces();
+        lambdas.lambdaInterfaceOperations();
+    }
+    public static void nonterminalStreamTest(){
+        NonterminalStreams stream = new NonterminalStreams();
+//        stream.nonterminalChainedStreams();
+//        stream.filteredStreams();
+//        stream.distinctStreams();
+//        stream.peekStreams();
+        stream.limitStreams();
     }
 
-    public static void streamTest(){
-        Streams stream = new Streams();
-        stream.nonterminalChainedStreams();
+    public static void terminalStreamTest() {
+        TerminalStreams stream = new TerminalStreams();
+//        stream.anyMatch();
+        stream.allMatch();
     }
 }

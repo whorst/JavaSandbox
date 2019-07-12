@@ -26,5 +26,6 @@ https://jaxenter.com/java-performance-tutorial-how-fast-are-the-java-8-streams-1
 
 http://tutorials.jenkov.com/java-functional-programming/streams.html
 -A non-terminal stream operation is an operation that adds a listener to the stream without doing anything else.
--A terminal stream operation is an operation that starts the internal iteration of the elements, calls all the listeners, a
-nd returns a result.
+    -Listeners allow you to iterate over the stream
+-A terminal stream operation is an operation that starts the internal iteration of the elements, calls all the listeners,
+and returns a result.
