@@ -3,8 +3,11 @@ import Interface.InterfaceImplementation;
 import Generics.*;
 import CollectionsTest.*;
 import Lambdas.*;
+import Streams.CollectorsTest;
 import Streams.NonterminalStreams;
 import Streams.TerminalStreams;
+
+import java.util.stream.Collectors;
 
 //http://tutorials.jenkov.com/java-functional-programming/streams.html
 
@@ -18,7 +21,9 @@ public class main {
 //        collectionsTest();
 //        lambdaTest();
 //        nonterminalStreamTest();
-        terminalStreamTest();
+//        terminalStreamTest();
+//        StreamIteratorIteration();
+        CollectorsTest();
     }
 
     public static void abstractClassTest(){
@@ -26,13 +31,11 @@ public class main {
         asc.abstractMethod();
         asc.nonAbstractSubMethod();
     }
-
     public static void interfaceTest(){
         InterfaceImplementation IntImp = new InterfaceImplementation();
         IntImp.myInterfaceMethod();
         IntImp.myOtherInterfaceMethod();
     }
-
     public static void genericsTest() throws IllegalAccessException, InstantiationException {
         Generic gen = new Generic();
         gen.typeInference();
@@ -43,7 +46,6 @@ public class main {
         CollectionsIterator ci = new CollectionsIterator();
         ci.listIterator();
     }
-
     public static void collectionsIterableTest(){
         CollectionsIterable cib = new CollectionsIterable();
         cib.listIteraable();
@@ -55,7 +57,6 @@ public class main {
         regCol.listComparableInterface();
 //        regCol.listComparator();
     }
-
     public static void lambdaTest(){
         AnonymousInterfaces lambdas = new AnonymousInterfaces();
         lambdas.lambdaInterfaceOperations();
@@ -68,10 +69,23 @@ public class main {
 //        stream.peekStreams();
         stream.limitStreams();
     }
-
     public static void terminalStreamTest() {
         TerminalStreams stream = new TerminalStreams();
 //        stream.anyMatch();
         stream.allMatch();
+    }
+    public static void StreamIteratorIteration(){
+        //Iteration with streams is slow if you're using primitives. Otherwise, very fast
+        //Iterators are the way to go for iterating over primitives
+        TimingStuff t = new TimingStuff();
+        t.String_Stream_vs_Iterator_iteration();
+        t.Object_Stream_vs_Iterator_iteration();
+//        t.objectStreamIteration(t.createObjectList());
+//        t.objectStreamIteration(t.createObjectList());
+//        t.stringStreamIteration(t.createStringList());
+    }
+    public static void CollectorsTest(){
+        CollectorsTest ct = new CollectorsTest();
+        ct.partitioningBy();
     }
 }
