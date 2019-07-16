@@ -86,6 +86,11 @@ public class main {
     }
     public static void CollectorsTest(){
         CollectorsTest ct = new CollectorsTest();
-        ct.partitioningBy();
+//        ct.partitioningBy();
+//        ct.summarizingInteger();
+//        ct.summarizingObjectInteger();
+        ct.biggestObjectElementOfStream();
+
+
     }
 }

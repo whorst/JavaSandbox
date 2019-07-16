@@ -14,7 +14,6 @@ https://javaconceptoftheday.com/collections-and-streams-in-java/
 https://jaxenter.com/java-performance-tutorial-how-fast-are-the-java-8-streams-118830.html
 
 -Streams were originally invented to make parallelism more available for devs
--Streams are slower on primitive data types
 -generally, streams are slower than for loops on arrays
 -Streams can be parallelized
     Arrays.stream(ints)
