@@ -1,7 +1,5 @@
 package Streams;
 
-import Interface.InterfaceImplementation;
-
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -76,12 +74,37 @@ public class CollectorsTest {
 
     public void partitioningBy() {
         String[] x = {"qwww", "asc", "sefsd", "efe", "efwe", "awda", "awdw"};
-        Collection givenList = new ArrayList();
+        Collection<String> givenList = new ArrayList<String>();
         givenList.addAll(Arrays.asList(x));
         Map<Boolean, List<String>> result = (Map<Boolean, List<String>>) givenList.stream()
                 .collect(Collectors.partitioningBy((String elm) -> elm.length() > 2));
         System.out.println(result.get(true));
     }
+    public void partitioningByTri() {
+        //This only works with booleans
+        String[] x = {"qwww", "asc", "sefsd", "efe", "efwe", "awda", "awdw"};
+        Collection<String> givenList = new ArrayList<String>();
+        givenList.addAll(Arrays.asList(x));
+        Map<Boolean, List<String>> result = (Map<Boolean, List<String>>) givenList.stream()
+                .collect(Collectors.partitioningBy( elm -> Boolean.parseBoolean(getLetter(elm))));
+        System.out.println(result);
+    }
+
+    public static String getLetter(String stringLetter){
+        String firstLetter = stringLetter.substring(0);
+
+        switch (firstLetter){
+            case "a":
+                return "a";
+            case "s":
+                return "s";
+            case "e":
+                return"e";
+
+        }
+        return "any";
+    };
+
 
     public static void summarizingInteger() {
         //Will return meta data about a given list of integers

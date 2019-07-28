@@ -85,8 +85,10 @@ public class main {
 //        t.stringStreamIteration(t.createStringList());
     }
     public static void CollectorsTest(){
+
         CollectorsTest ct = new CollectorsTest();
-        System.out.println(ct.findMostFrequentItem());
+        ct.partitioningByTri();
+        //        System.out.println(ct.findMostFrequentItem());
         //        ct.partitioningBy();
 //        ct.summarizingInteger();
 //        ct.summarizingObjectInteger();
