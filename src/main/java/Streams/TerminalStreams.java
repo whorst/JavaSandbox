@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 public class TerminalStreams {
 
     public void anyMatch() {
-        //Will match any option that starts witht he value specified
+        //Will match any option that starts with the value specified
         List<String> stringList = new ArrayList<String>();
 
         stringList.add("One flew over the cuckoo's nest");

@@ -69,7 +69,8 @@ public class CollectorsTest {
         String[] x = {"qwww", "asc", "sefsd", "efe", "efwe", "awda", "awdw"};
         Collection t = new ArrayList();
         t.addAll(Arrays.asList(x));
-        t = (Collection) t.stream().map(element -> element.toString().toUpperCase()).collect(Collectors.toList());
+        t = (Collection) t.stream().map(element -> element.toString().toUpperCase())
+                .collect(Collectors.toList());
         System.out.println(t);
     }
 
@@ -79,7 +80,7 @@ public class CollectorsTest {
         givenList.addAll(Arrays.asList(x));
         Map<Boolean, List<String>> result = (Map<Boolean, List<String>>) givenList.stream()
                 .collect(Collectors.partitioningBy((String elm) -> elm.length() > 2));
-        System.out.println(result);
+        System.out.println(result.get(true));
     }
 
     public static void summarizingInteger() {

@@ -86,10 +86,11 @@ public class main {
     }
     public static void CollectorsTest(){
         CollectorsTest ct = new CollectorsTest();
-//        ct.partitioningBy();
+        System.out.println(ct.findMostFrequentItem());
+        //        ct.partitioningBy();
 //        ct.summarizingInteger();
 //        ct.summarizingObjectInteger();
-        ct.biggestObjectElementOfStream();
+//        ct.biggestObjectElementOfStream();
 
 
     }

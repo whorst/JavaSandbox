@@ -85,9 +85,14 @@ public class NonterminalStreams {
         stringList.add("one");
 
         Stream<String> stream = stringList.stream();
-        stream
-                .limit(2)
-                .forEach( element -> { System.out.println(element); });
+
+
+        System.out.println(
+                stream
+                    .map((value) -> { return value.toUpperCase(); })
+                    .limit(2)
+                    .collect(Collectors.toList())
+        );
     }
 
     public void peekStreams() {
