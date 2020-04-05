@@ -1,4 +1,8 @@
 import AbstractClass.AbstractSubClass;
+import ChallengeProblems.Recursion.MagicIndex;
+import ChallengeProblems.Recursion.Stairs;
+import ChallengeProblems.Recursion.Stairs;
+import ChallengeProblems.Recursion.SubsetsOfASet;
 import Interface.InterfaceImplementation;
 import Generics.*;
 import CollectionsTest.*;
@@ -24,8 +28,10 @@ public class main {
 //        terminalStreamTest();
 //        StreamIteratorIteration();
 //        CollectorsTest();
-
-
+//        Stairs.stairs(5);
+//        MagicIndex.findMid();
+        SubsetsOfASet.subSet();
+    }
 
 //        ArrayList<Integer> prime = new ArrayList();
 //        prime.add(2);
@@ -53,7 +59,7 @@ public class main {
 //            x--;
 //        }
 //        return true;
-    }
+   // }
         private static void getNPrimes(int nPrimes) {
             int [] primeArray = {nPrimes};
             primeArray[0] = 2;
@@ -132,7 +138,9 @@ public class main {
     public static void CollectorsTest(){
 
         CollectorsTest ct = new CollectorsTest();
-        ct.partitioningByTri();
+        System.out.println(ct.findMapNumbers());
+//        ct.partitioningBy();
+//        ct.summarizingInteger();
         //        System.out.println(ct.findMostFrequentItem());
         //        ct.partitioningBy();
 //        ct.summarizingInteger();
