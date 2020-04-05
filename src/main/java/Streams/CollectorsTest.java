@@ -13,18 +13,25 @@ public class CollectorsTest {
     //Collectors are dependent on the Stream.collect method, Allows for repackaging/mutable fold operations to be
     // performed on data elements in a stream instance
 
-    public static Optional<Map.Entry<Integer, Long>> findMostFrequentItem() {
+    public static Map<Integer, Long> findMapNumbers() {
 
         //groupingBy is used for grouping objects by some property and storing results in a map
         //Function.identity takes in a value and returns a value
         //Collectors.counting counts the number of input elements, given a stream
 
-        Optional<Map.Entry<Integer, Long>> t = Stream.of(1, 3, 4, 3, 4, 3, 2, 3, 3, 3, 3, 3, 5, 5, 5, 5, 5, 5, 5, 5, 5)
-                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
-                .entrySet()
-                .stream()
-                .max(Comparator.comparing(Map.Entry::getValue));
+
+        Map<Integer, Long> t = generateLotsOfNumbers().stream().parallel()
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         return t;
+    }
+
+    public static ArrayList<Integer> generateLotsOfNumbers(){
+        Random r = new Random();
+        ArrayList<Integer> x = new ArrayList();
+        for (int i = 0; i< 10000; i++){
+            x.add(r.nextInt(10));
+        }
+        return x;
     }
 
     public void toList() {
@@ -77,8 +84,8 @@ public class CollectorsTest {
         Collection<String> givenList = new ArrayList<String>();
         givenList.addAll(Arrays.asList(x));
         Map<Boolean, List<String>> result = (Map<Boolean, List<String>>) givenList.stream()
-                .collect(Collectors.partitioningBy((String elm) -> elm.length() > 2));
-        System.out.println(result.get(true));
+                .collect(Collectors.partitioningBy((String elm) -> elm.length() > 3));
+        System.out.println(result);
     }
     public void partitioningByTri() {
         //This only works with booleans
@@ -135,7 +142,7 @@ public class CollectorsTest {
             fol.add(new FakeObject(i));
         }
         FakeObject result =  fol.stream().max(Comparator.comparingInt(FakeObject::getSpeed)).get();
-        System.out.println(result.getSpeed());
+        System.out.println(result);
         //The .get removes the need for the result to be optional
     }
 }

@@ -1,4 +1,8 @@
 import AbstractClass.AbstractSubClass;
+import ChallengeProblems.Recursion.MagicIndex;
+import ChallengeProblems.Recursion.Stairs;
+import ChallengeProblems.Recursion.Stairs;
+import ChallengeProblems.Recursion.SubsetsOfASet;
 import Interface.InterfaceImplementation;
 import Generics.*;
 import CollectionsTest.*;
@@ -23,7 +27,10 @@ public class main {
 //        nonterminalStreamTest();
 //        terminalStreamTest();
 //        StreamIteratorIteration();
-        CollectorsTest();
+//        CollectorsTest();
+//        Stairs.stairs(5);
+//        MagicIndex.findMid();
+        SubsetsOfASet.subSet();
     }
 
     public static void abstractClassTest(){
@@ -87,7 +94,9 @@ public class main {
     public static void CollectorsTest(){
 
         CollectorsTest ct = new CollectorsTest();
-        ct.partitioningByTri();
+        System.out.println(ct.findMapNumbers());
+//        ct.partitioningBy();
+//        ct.summarizingInteger();
         //        System.out.println(ct.findMostFrequentItem());
         //        ct.partitioningBy();
 //        ct.summarizingInteger();
