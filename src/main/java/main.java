@@ -23,7 +23,8 @@ public class main {
 //        Stairs.stairs(5);
 //        MagicIndex.findMid();
 //        SubsetsOfASet.subSet();
-        AllPermutationsOfString.getPermutations("abcdefghi");
+//        AllPermutationsOfString.getPermutations("abcdef");
+        AllPermutationsOfStringWithDupes.getPermutations("aaabcd");
     }
 
     public static void JavaConcepts() throws InstantiationException, IllegalAccessException {
