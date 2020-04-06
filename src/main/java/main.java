@@ -1,8 +1,6 @@
 import AbstractClass.AbstractSubClass;
-import ChallengeProblems.Recursion.MagicIndex;
+import ChallengeProblems.Recursion.*;
 import ChallengeProblems.Recursion.Stairs;
-import ChallengeProblems.Recursion.Stairs;
-import ChallengeProblems.Recursion.SubsetsOfASet;
 import Interface.InterfaceImplementation;
 import Generics.*;
 import CollectionsTest.*;
@@ -24,7 +22,8 @@ public class main {
     public static void ChallengeProblems() throws IllegalAccessException, InstantiationException {
 //        Stairs.stairs(5);
 //        MagicIndex.findMid();
-        SubsetsOfASet.subSet();
+//        SubsetsOfASet.subSet();
+        AllPermutationsOfString.getPermutations("abcdefghi");
     }
 
     public static void JavaConcepts() throws InstantiationException, IllegalAccessException {
