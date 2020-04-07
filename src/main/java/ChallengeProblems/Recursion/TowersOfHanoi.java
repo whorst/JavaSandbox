@@ -10,31 +10,30 @@ public class TowersOfHanoi {
         disk diskOne = new disk(1);
         disk diskTwo = new disk(2);
         disk diskThree = new disk(3);
+        disk diskFour = new disk(4);
 
         Stack stackOne = new Stack();
         Stack stackTwo = new Stack();
         Stack stackThree = new Stack();
 
+        stackOne.push(diskFour);
         stackOne.push(diskThree);
         stackOne.push(diskTwo);
         stackOne.push(diskOne);
 
-        ArrayList <Stack> stackArrayList = new ArrayList();
-        stackArrayList.add(stackOne);
-        stackArrayList.add(stackTwo);
-        stackArrayList.add(stackThree);
-
-        startStacking(stackArrayList);
+        startStacking(4, stackOne, stackTwo, stackThree);
     }
-        public static ArrayList<Stack> startStacking(ArrayList<Stack> stackArrayList){
-            Stack stackOne = stackArrayList.get(0);
-            Stack stackTwo = stackArrayList.get(1);
-            Stack stackThree = stackArrayList.get(2);
-
-            if(stackThree.size() == 3){
-                return stackArrayList;
+        public static void startStacking(int disks, Stack<disk> from, Stack aux, Stack<disk> to){
+            if(disks==1){
+                if(!from.empty()){
+                    disk x = from.pop();
+                    to.push(x);
+                }
+                return;
             }
-
-            return stackArrayList;
+            startStacking(disks-1, from, to, aux);
+            startStacking(1,       from, aux, to);
+            startStacking(disks-1, aux, from, to);
+            return;
         }
 }

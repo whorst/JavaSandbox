@@ -6,4 +6,8 @@ public class disk {
         this.diskSize = numericalValue;
     }
 
+    @Override
+    public String toString() {
+        return String.valueOf(diskSize);
+    }
 }
