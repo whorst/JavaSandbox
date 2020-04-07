@@ -24,7 +24,8 @@ public class main {
 //        MagicIndex.findMid();
 //        SubsetsOfASet.subSet();
 //        AllPermutationsOfString.getPermutations("abcdef");
-        AllPermutationsOfStringWithDupes.getPermutations("aaabcd");
+//        AllPermutationsOfStringWithDupes.getPermutations("aaabcd");
+        TowersOfHanoi.towersOfHanoi();
     }
 
     public static void JavaConcepts() throws InstantiationException, IllegalAccessException {
