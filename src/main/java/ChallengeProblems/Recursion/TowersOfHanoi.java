@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 import ChallengeProblems.Recursion.helpers.disk;
+import ChallengeProblems.Recursion.helpers.myOwnStack;
 
 public class TowersOfHanoi {
     public static void towersOfHanoi() {
@@ -15,6 +16,10 @@ public class TowersOfHanoi {
         Stack stackOne = new Stack();
         Stack stackTwo = new Stack();
         Stack stackThree = new Stack();
+
+//        myOwnStack stackOne = new myOwnStack("A");
+//        myOwnStack stackTwo = new myOwnStack("B");
+//        myOwnStack stackThree = new myOwnStack("C");
 
         stackOne.push(diskFour);
         stackOne.push(diskThree);
@@ -30,10 +35,10 @@ public class TowersOfHanoi {
                     to.push(x);
                 }
                 return;
-            }
-            startStacking(disks-1, from, to, aux);
-            startStacking(1,       from, aux, to);
-            startStacking(disks-1, aux, from, to);
+            }                        //from //aux  //to
+            startStacking(disks-1, from, to, aux); //You want to move all of the top disks excluding the N disk to aux tower
+            startStacking(1,       from, aux, to); //You want to move the leftover disk to the last tower
+            startStacking(disks-1, aux, from, to); //You want to move everything from the au tower to the beginning
             return;
         }
 }
