@@ -38,7 +38,7 @@ public class TowersOfHanoi {
             }                        //from //aux  //to
             startStacking(disks-1, from, to, aux); //You want to move all of the top disks excluding the N disk to aux tower
             startStacking(1,       from, aux, to); //You want to move the leftover disk to the last tower
-            startStacking(disks-1, aux, from, to); //You want to move everything from the au tower to the beginning
+            startStacking(disks-1, aux, from, to); //You want to move n-1 disks from the aux tower to the beginning
             return;
         }
 }

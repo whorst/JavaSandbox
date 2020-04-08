@@ -25,7 +25,8 @@ public class main {
 //        SubsetsOfASet.subSet();
 //        AllPermutationsOfString.getPermutations("abcdef");
 //        AllPermutationsOfStringWithDupes.getPermutations("aaabcd");
-        TowersOfHanoi.towersOfHanoi();
+//        TowersOfHanoi.towersOfHanoi();
+        Parenthesis.allParens(7);
     }
 
     public static void JavaConcepts() throws InstantiationException, IllegalAccessException {
