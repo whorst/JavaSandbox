@@ -27,7 +27,8 @@ public class main {
 //        AllPermutationsOfStringWithDupes.getPermutations("aaabcd");
 //        TowersOfHanoi.towersOfHanoi();
 //        Parenthesis.allParens(7);
-        Coins.coins(25);
+//        Coins.coins(25);
+        PaintFill.start();
     }
 
     public static void JavaConcepts() throws InstantiationException, IllegalAccessException {
