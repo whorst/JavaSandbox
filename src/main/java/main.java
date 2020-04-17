@@ -22,12 +22,12 @@ public class main {
     public static void ChallengeProblems() throws IllegalAccessException, InstantiationException {
 //        Stairs.stairs(5);
 //        MagicIndex.findMid();
-//        SubsetsOfASet.subSet();
+        SubsetsOfASet.subSet();
 //        AllPermutationsOfString.getPermutations("abcdef");
 //        AllPermutationsOfStringWithDupes.getPermutations("aaabcd");
 //        TowersOfHanoi.towersOfHanoi();
 //        Parenthesis.allParens(7);
-        Coins.coins(25);
+//        Coins.coins(25);
     }
 
     public static void JavaConcepts() throws InstantiationException, IllegalAccessException {
