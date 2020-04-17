@@ -26,15 +26,6 @@ public class SubsetsOfASet {
         return (ArrayList) previousSubsets.clone();
     }
 
-    public static ArrayList<ArrayList<Integer>> generateDeepCopy(ArrayList<ArrayList<Integer>> originalArrayList){
-        ArrayList <ArrayList<Integer>> newArrayList  = new ArrayList();
-        for(ArrayList innerArrayList : originalArrayList){
-            ArrayList<Integer> newInner = (ArrayList<Integer>) innerArrayList.clone();
-            newArrayList.add(newInner);
-        }
-        return newArrayList;
-    }
-
     public static ArrayList generatePreviousSubsetsWithNewInt(ArrayList<ArrayList> prevSub, int index){
         for(ArrayList set: prevSub){
             set.add(al.get(index));
@@ -50,10 +41,12 @@ public class SubsetsOfASet {
         hm.put((Integer) al.get(0), newArray);
     }
 
-    public static void populateMapWithValuesAndEmptyLists() throws IllegalAccessException, InstantiationException {
-        for (Object el: al){
-            ArrayList outerArrayList = new ArrayList();
-            hm.put((Integer) el, outerArrayList);
+    public static ArrayList<ArrayList<Integer>> generateDeepCopy(ArrayList<ArrayList<Integer>> originalArrayList){
+        ArrayList <ArrayList<Integer>> newArrayList  = new ArrayList();
+        for(ArrayList innerArrayList : originalArrayList){
+            ArrayList<Integer> newInner = (ArrayList<Integer>) innerArrayList.clone();
+            newArrayList.add(newInner);
         }
+        return newArrayList;
     }
 }
