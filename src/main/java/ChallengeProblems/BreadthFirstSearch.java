@@ -7,13 +7,9 @@ import java.util.Queue;
 public class BreadthFirstSearch {
 
     public static void doTheThing(){
-        Node A = new Node();   Node B = new Node();    Node C = new Node();    Node D = new Node();
-        A.value = "A";         B.value = "B";          C.value = "C";          D.value = "D";
-        A.visited=true;        B.visited=false;        C.visited=false;        D.visited=false;
-
-        Node E = new Node();
-        E.value = "E";
-        E.visited=false;
+        Node A = new Node();   Node B = new Node();    Node C = new Node();    Node D = new Node();     Node E = new Node();
+        A.value = "A";         B.value = "B";          C.value = "C";          D.value = "D";           E.value = "E";
+        A.visited=true;        B.visited=false;        C.visited=false;        D.visited=false;         E.visited=false;
 
         A.adjList.add(C);
         A.adjList.add(D);

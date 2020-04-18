@@ -1,4 +1,6 @@
 import AbstractClass.AbstractSubClass;
+import ChallengeProblems.Graphs.MinimalTree;
+import ChallengeProblems.Graphs.RouteBetweenTwoNodes;
 import ChallengeProblems.Recursion.*;
 import ChallengeProblems.Recursion.Stairs;
 import Interface.InterfaceImplementation;
@@ -28,7 +30,9 @@ public class main {
 //        TowersOfHanoi.towersOfHanoi();
 //        Parenthesis.allParens(7);
 //        Coins.coins(25);
-        PaintFill.start();
+//        PaintFill.start();
+//        RouteBetweenTwoNodes.startTheProgram();
+        MinimalTree.doTheThing();
     }
 
     public static void JavaConcepts() throws InstantiationException, IllegalAccessException {
