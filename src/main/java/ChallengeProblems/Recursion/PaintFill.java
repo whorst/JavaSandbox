@@ -26,6 +26,9 @@ public class PaintFill {
         myArr[3][2] = 0;
         myArr[3][3] = 0;
 
+        for(int[] x: myArr)
+            System.out.println(Arrays.toString(x));
+        System.out.println("                ");
 
         paintFill(2,2, 1,null,4,4, myArr);
 

@@ -1,4 +1,5 @@
 import AbstractClass.AbstractSubClass;
+import ChallengeProblems.Graphs.ListOfDepths;
 import ChallengeProblems.Graphs.MinimalTree;
 import ChallengeProblems.Graphs.RouteBetweenTwoNodes;
 import ChallengeProblems.Recursion.*;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 public class main {
     public static void main(String[] args) throws InstantiationException, IllegalAccessException {
 //        JavaConcepts();
+//        Does_Data_Added_To_ArrayList_In_Method_Persist_After_Method_Returns();
         ChallengeProblems();
     }
 
@@ -32,7 +34,8 @@ public class main {
 //        Coins.coins(25);
 //        PaintFill.start();
 //        RouteBetweenTwoNodes.startTheProgram();
-        MinimalTree.doTheThing();
+//        MinimalTree.doTheThing();
+        ListOfDepths.doTheThing();
     }
 
     public static void JavaConcepts() throws InstantiationException, IllegalAccessException {
@@ -119,6 +122,17 @@ public class main {
 //        ct.biggestObjectElementOfStream();
 
 
+    }
+    public static void Does_Data_Added_To_ArrayList_In_Method_Persist_After_Method_Returns(){
+        ArrayList al = new ArrayList();
+        al.add(1);
+        System.out.println("Before Method call AL Size is " + al.size());
+        BMethod(al);
+        System.out.println("After Method call AL Size is " + al.size());
+    }
+    public static void BMethod(ArrayList al){
+        al.add(1);
+        al.add(2);
     }
 }
 
