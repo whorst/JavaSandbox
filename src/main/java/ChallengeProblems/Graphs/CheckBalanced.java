@@ -17,7 +17,7 @@ public class CheckBalanced {
         bst.add(84);
         bst.add(85);
 
-        int x = getSubTreeHeight(bst.root, 1);
+        int x = getSubTreeHeight(bst.root);
         System.out.println(x);
         System.out.println(Integer.MIN_VALUE);
     }
