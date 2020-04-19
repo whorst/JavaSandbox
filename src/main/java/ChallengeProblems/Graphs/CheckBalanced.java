@@ -22,7 +22,7 @@ public class CheckBalanced {
         System.out.println(Integer.MIN_VALUE);
     }
 
-    public static int getSubTreeHeight(BSTNode getHeight, int currHeight) throws Exception {
+    public static int getSubTreeHeight(BSTNode getHeight) throws Exception {
         int leftHeight=0;
         int rightHeight=0;
 
@@ -30,10 +30,10 @@ public class CheckBalanced {
             return 1;
 
         if (getHeight.left != null) {
-            leftHeight += getSubTreeHeight(getHeight.left, currHeight + 1); //left
+            leftHeight += getSubTreeHeight(getHeight.left); //left
         }
         if (getHeight.right != null) {
-            rightHeight += getSubTreeHeight(getHeight.right, currHeight + 1); // right
+            rightHeight += getSubTreeHeight(getHeight.right); // right
         }
         if(leftHeight==rightHeight){
             return leftHeight+1;
