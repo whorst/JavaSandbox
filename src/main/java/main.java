@@ -1,4 +1,5 @@
 import AbstractClass.AbstractSubClass;
+import ChallengeProblems.Graphs.CheckBalanced;
 import ChallengeProblems.Graphs.ListOfDepths;
 import ChallengeProblems.Graphs.MinimalTree;
 import ChallengeProblems.Graphs.RouteBetweenTwoNodes;
@@ -35,7 +36,8 @@ public class main {
 //        PaintFill.start();
 //        RouteBetweenTwoNodes.startTheProgram();
 //        MinimalTree.doTheThing();
-        ListOfDepths.doTheThing();
+//        ListOfDepths.doTheThing();
+        CheckBalanced.doTheThing();
     }
 
     public static void JavaConcepts() throws InstantiationException, IllegalAccessException {
