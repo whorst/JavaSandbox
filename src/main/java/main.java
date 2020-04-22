@@ -1,8 +1,5 @@
 import AbstractClass.AbstractSubClass;
-import ChallengeProblems.Graphs.CheckBalanced;
-import ChallengeProblems.Graphs.ListOfDepths;
-import ChallengeProblems.Graphs.MinimalTree;
-import ChallengeProblems.Graphs.RouteBetweenTwoNodes;
+import ChallengeProblems.Graphs.*;
 import ChallengeProblems.Recursion.*;
 import ChallengeProblems.Recursion.Stairs;
 import Interface.InterfaceImplementation;
@@ -18,13 +15,13 @@ import java.util.ArrayList;
 //http://tutorials.jenkov.com/java-functional-programming/streams.html
 
 public class main {
-    public static void main(String[] args) throws InstantiationException, IllegalAccessException {
+    public static void main(String[] args) throws Exception {
 //        JavaConcepts();
 //        Does_Data_Added_To_ArrayList_In_Method_Persist_After_Method_Returns();
         ChallengeProblems();
     }
 
-    public static void ChallengeProblems() throws IllegalAccessException, InstantiationException {
+    public static void ChallengeProblems() throws Exception {
 //        Stairs.stairs(5);
 //        MagicIndex.findMid();
 //        SubsetsOfASet.subSet();
@@ -37,7 +34,8 @@ public class main {
 //        RouteBetweenTwoNodes.startTheProgram();
 //        MinimalTree.doTheThing();
 //        ListOfDepths.doTheThing();
-        CheckBalanced.doTheThing();
+//        CheckBalanced.doTheThing();
+//        IsValidBST.doTheThing();
     }
 
     public static void JavaConcepts() throws InstantiationException, IllegalAccessException {

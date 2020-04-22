@@ -28,6 +28,7 @@ public class BinarySearchTree {
             }
             if (nodeToAdd.value == nodeToAppendTo.value) {
                 System.out.println("You are adding a duplicate");
+                return;
             }
         }
     }

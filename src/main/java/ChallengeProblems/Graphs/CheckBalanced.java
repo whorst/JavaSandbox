@@ -6,20 +6,28 @@ import ChallengeProblems.HelperFunctions.BinarySearchTree.BinarySearchTree;
 public class CheckBalanced {
     //Based off of Cracking the Coding Interview 4.4
     public static void doTheThing() throws Exception {
-        BinarySearchTree bst = new BinarySearchTree(50);
-        bst.add(39);
-        bst.add(40);
-        bst.add(21);
+//Uneven
+//        BinarySearchTree bst = new BinarySearchTree(50);
+//        bst.add(39);
+//        bst.add(40);
+//        bst.add(21);
+//
+//        bst.add(52);
+//        bst.add(51);
+//        bst.add(83);
+//        bst.add(84);
+//        bst.add(85);
 
-        bst.add(52);
-        bst.add(51);
-        bst.add(83);
-        bst.add(84);
-        bst.add(85);
+//Even
+        BinarySearchTree bst = new BinarySearchTree(5);
+        bst.add(3);
+        bst.add(7);
+        bst.add(2);
+        bst.add(4);
+        bst.add(6);
 
         int x = getSubTreeHeight(bst.root);
         System.out.println(x);
-        System.out.println(Integer.MIN_VALUE);
     }
 
     public static int getSubTreeHeight(BSTNode getHeight) throws Exception {
