@@ -24,6 +24,7 @@ public class BreadthFirstSearch {
     }
 
     public static void BFS(Queue<Node> q){
+       while(!q.isEmpty()){
         Node node = q.remove();
         node.visited = true;
         for(Node n : node.adjList){
@@ -33,6 +34,7 @@ public class BreadthFirstSearch {
             }
         }
 
+      }
     }
 
     public static class Node {
