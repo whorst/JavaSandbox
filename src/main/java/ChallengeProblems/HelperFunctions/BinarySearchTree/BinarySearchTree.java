@@ -1,10 +1,16 @@
 package ChallengeProblems.HelperFunctions.BinarySearchTree;
 
+import ChallengeProblems.HelperFunctions.LookAtThisGraph.GraphNode;
+
+import java.util.ArrayList;
+
 public class BinarySearchTree {
     public BSTNode root;
+    public ArrayList<BSTNode> nodeHelperList = new ArrayList<>();
 
     public BinarySearchTree(int rootInt) {
         this.root = new BSTNode(rootInt);
+        nodeHelperList.add(this.root);
     }
 
     public void add(int numberToAdd) {
@@ -15,6 +21,8 @@ public class BinarySearchTree {
             if (nodeToAdd.value > nodeToAppendTo.value) {  //Add to the right
                 if (nodeToAppendTo.right == null) {
                     nodeToAppendTo.right = nodeToAdd;
+                    nodeToAdd.parent = nodeToAppendTo;
+                    nodeHelperList.add(nodeToAdd);
                     return;
                 }
                 nodeToAppendTo = nodeToAppendTo.right;
@@ -22,6 +30,8 @@ public class BinarySearchTree {
             if (nodeToAdd.value < nodeToAppendTo.value) { //Add to the left
                 if (nodeToAppendTo.left == null) {
                     nodeToAppendTo.left = nodeToAdd;
+                    nodeToAdd.parent = nodeToAppendTo;
+                    nodeHelperList.add(nodeToAdd);
                     return;
                 }
                 nodeToAppendTo = nodeToAppendTo.left;
