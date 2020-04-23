@@ -36,6 +36,7 @@ public class main {
 //        ListOfDepths.doTheThing();
 //        CheckBalanced.doTheThing();
 //        IsValidBST.doTheThing();
+        BuildOrder.doTheThing();
     }
 
     public static void JavaConcepts() throws InstantiationException, IllegalAccessException {

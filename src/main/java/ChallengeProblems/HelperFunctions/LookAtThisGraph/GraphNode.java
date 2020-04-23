@@ -1,11 +1,14 @@
 package ChallengeProblems.HelperFunctions.LookAtThisGraph;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
 
 public class GraphNode {
     public String value;
-    public ArrayList<GraphNode> attachedNodes = new ArrayList();
-    public ArrayList<GraphNode> nodesThatDependOn = new ArrayList();
+    public ArrayList<GraphNode> parents = new ArrayList();
+    public ArrayList<GraphNode> children = new ArrayList();
     public boolean visited = false;
 
     public GraphNode(String myVal) {
@@ -13,6 +16,6 @@ public class GraphNode {
     }
 
     public void add(GraphNode graphNodeToAdd) {
-        attachedNodes.add(graphNodeToAdd);
+        children.add(graphNodeToAdd);
     }
 }
