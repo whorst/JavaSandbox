@@ -1,4 +1,5 @@
 import AbstractClass.AbstractSubClass;
+import ChallengeProblems.DijkstrasAlgorithm.DijsktrasAlgorithm;
 import ChallengeProblems.Graphs.*;
 import ChallengeProblems.Recursion.*;
 import ChallengeProblems.Recursion.Stairs;
@@ -37,7 +38,8 @@ public class main {
 //        CheckBalanced.doTheThing();
 //        IsValidBST.doTheThing();
 //        BuildOrder.doTheThing();
-        FirstCommonAncestor.doTheThing();
+//        FirstCommonAncestor.doTheThing();
+        DijsktrasAlgorithm.doTheThing();
     }
 
     public static void JavaConcepts() throws InstantiationException, IllegalAccessException {
