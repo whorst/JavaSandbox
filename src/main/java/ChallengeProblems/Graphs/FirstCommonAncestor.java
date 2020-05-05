@@ -7,6 +7,7 @@ import ChallengeProblems.HelperFunctions.LookAtThisGraph.GraphNode;
 public class FirstCommonAncestor {
     //Based off of cracking the coding interview 4.8
     public static void doTheThing() {
+        //The first common ancestor is the node where the two dependents are on the left and right side of the ancestor
         BinarySearchTree bst = new BinarySearchTree(50);
         bst.add(23);
         bst.add(21);

@@ -36,8 +36,8 @@ public class main {
 //        ListOfDepths.doTheThing();
 //        CheckBalanced.doTheThing();
 //        IsValidBST.doTheThing();
-//        BuildOrder.doTheThing();
-        FirstCommonAncestor.doTheThing();
+        BuildOrder.doTheThing();
+//        FirstCommonAncestor.doTheThing();
     }
 
     public static void JavaConcepts() throws InstantiationException, IllegalAccessException {

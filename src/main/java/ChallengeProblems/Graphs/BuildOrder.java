@@ -7,6 +7,8 @@ import java.util.ArrayList;
 
 public class BuildOrder {
     public static void doTheThing() {
+
+        //You can also eep track of the dependencies of a node with an integer
         ArrayList<ArrayList<String>> pairAl = new ArrayList();
         ArrayList<String> nodeValueList = new ArrayList();
 
