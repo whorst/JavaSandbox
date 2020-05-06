@@ -1,33 +1,68 @@
 package ChallengeProblems.HelperFunctions.LookAtThisWeightedGraph;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
 
+/*
+* A---6---B --5
+* |      /|    \
+* |     / |     \
+  1    /  2      C
+  |   2   |     /
+* | /     |    /
+* D---1---E --5
+* */
+
 public class WeightedGraph {
-    int vertices;
-    LinkedList<Edge>[] adjacencylist;
+//                            0   1   2   3   4
+//
+//    HashMap<String, ArrayList<Edge>> adjacencyMap = new HashMap<>();
+//    ArrayList<Integer> alreadyVisited = new ArrayList<>();
 
-    public WeightedGraph(int vertices) {
-        this.vertices = vertices;
-        adjacencylist = new LinkedList[vertices];
-
-        for (int i = 0; i < vertices; i++) {
-            adjacencylist[i] = new LinkedList<>();
-        }
-    }
+    public boolean[] alreadyVisited = {false, false, false, false, false};
+    public int[] distanceFromOrigin = {0,Integer.MAX_VALUE,Integer.MAX_VALUE,Integer.MAX_VALUE,Integer.MAX_VALUE};
+    public char [] vertexArray = {'A','B','C','D','E'};
+    public int[][] weightArray;
 
 
-    public void addEdge(int source, int destination, int weight) {
-        Edge edge = new Edge(source, destination, weight);
-        adjacencylist[source].addFirst(edge); //for directed graph
-    }
-
-    public void printGraph(){
-        for (int i = 0; i <vertices ; i++) {
-            LinkedList<Edge> list = adjacencylist[i];
-            for (int j = 0; j <list.size() ; j++) {
-                System.out.println("vertex-" + i + " is connected to " +
-                        list.get(j).destination + " with weight " +  list.get(j).weight);
+    public WeightedGraph() {
+        this.weightArray = new int[5][5];
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                weightArray[i][j] = Integer.MAX_VALUE;
             }
         }
+
+        createEdge('A', 'B', 6);
+        createEdge('A', 'D', 1);
+        createEdge('D', 'B', 2);
+        createEdge('D', 'E', 1);
+        createEdge('B', 'E', 2);
+        createEdge('B', 'C', 5);
+        createEdge('E', 'C', 5);
+        createEdge('E', 'B', 2);
+//        System.out.println(this.weightArray[0][1]);
     }
+
+
+    public void setAlreadyvisited(int index) {
+//        int myIndex = convertToInteger(index);
+        this.alreadyVisited[index] = true;
+    }
+
+    public boolean isAlreadyvisited(int index) {
+//        int myIndex = convertToInteger(index);
+        return this.alreadyVisited[index];
+    }
+
+    public void createEdge(char src, char dst, int weight) {
+        int srcInt = (Character.getNumericValue(src)) - 10;
+        int dstInt = (Character.getNumericValue(dst)) - 10;
+
+        this.weightArray[srcInt][dstInt] = weight;
+    }
+
+
+
 }
