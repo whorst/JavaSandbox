@@ -63,14 +63,13 @@ public class DijsktrasAlgorithm {
     }
 
     private static int findPreviousNeighborToVisit(int previouslyVisitedSource, WeightedGraph graph, int[] visitedWeight, HashMap<Integer, ArrayList> neighborMap) {
-//        neighborMap.get(previouslyVisitedSource);
         int indexToVisit = Integer.MAX_VALUE;
         int lowestWeight=Integer.MAX_VALUE;
         for(int i=0; i<neighborMap.get(previouslyVisitedSource).size(); i++){
             int currIndex = (int) neighborMap.get(previouslyVisitedSource).get(i);
-            int x = graph.weightArray[previouslyVisitedSource][currIndex];
-            if(x < lowestWeight && visitedWeight[currIndex]==Integer.MAX_VALUE){
-                lowestWeight = x;
+            int weight = graph.weightArray[previouslyVisitedSource][currIndex];
+            if(weight < lowestWeight && visitedWeight[currIndex]==Integer.MAX_VALUE){
+                lowestWeight = weight;
                 indexToVisit = currIndex;
             }
         }
