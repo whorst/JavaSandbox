@@ -40,6 +40,7 @@ public class main {
 //        BuildOrder.doTheThing();
 //        FirstCommonAncestor.doTheThing();
         DijsktrasAlgorithm.doTheThing();
+        System.out.println(Character.getNumericValue('S')*31^(31-1));
     }
 
     public static void JavaConcepts() throws InstantiationException, IllegalAccessException {
