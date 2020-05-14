@@ -1,4 +1,5 @@
 import AbstractClass.AbstractSubClass;
+import ChallengeProblems.CheckSubtree.CheckSubtree;
 import ChallengeProblems.DijkstrasAlgorithm.DijsktrasAlgorithm;
 import ChallengeProblems.Graphs.*;
 import ChallengeProblems.Recursion.*;
@@ -39,8 +40,9 @@ public class main {
 //        IsValidBST.doTheThing();
 //        BuildOrder.doTheThing();
 //        FirstCommonAncestor.doTheThing();
-        DijsktrasAlgorithm.doTheThing();
-        System.out.println(Character.getNumericValue('S')*31^(31-1));
+//        DijsktrasAlgorithm.doTheThing();
+//        System.out.println(Character.getNumericValue('S')*31^(31-1));
+        CheckSubtree.doTheThing();
     }
 
     public static void JavaConcepts() throws InstantiationException, IllegalAccessException {
