@@ -1,4 +1,5 @@
 import AbstractClass.AbstractSubClass;
+import ChallengeProblems.ArraysAndStrings.PalindromePermutation;
 import ChallengeProblems.CheckSubtree.CheckSubtree;
 import ChallengeProblems.DijkstrasAlgorithm.DijsktrasAlgorithm;
 import ChallengeProblems.Graphs.*;
@@ -42,7 +43,8 @@ public class main {
 //        FirstCommonAncestor.doTheThing();
 //        DijsktrasAlgorithm.doTheThing();
 //        System.out.println(Character.getNumericValue('S')*31^(31-1));
-        CheckSubtree.doTheThing();
+//        CheckSubtree.doTheThing();
+        PalindromePermutation.doTheThing();
     }
 
     public static void JavaConcepts() throws InstantiationException, IllegalAccessException {
