@@ -1,4 +1,5 @@
 import AbstractClass.AbstractSubClass;
+import ChallengeProblems.ArraysAndStrings.OneWay;
 import ChallengeProblems.ArraysAndStrings.PalindromePermutation;
 import ChallengeProblems.CheckSubtree.CheckSubtree;
 import ChallengeProblems.DijkstrasAlgorithm.DijsktrasAlgorithm;
@@ -44,7 +45,9 @@ public class main {
 //        DijsktrasAlgorithm.doTheThing();
 //        System.out.println(Character.getNumericValue('S')*31^(31-1));
 //        CheckSubtree.doTheThing();
-        PalindromePermutation.doTheThing();
+
+//        PalindromePermutation.doTheThing();
+        OneWay.doTheThing();
     }
 
     public static void JavaConcepts() throws InstantiationException, IllegalAccessException {
