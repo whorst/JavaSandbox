@@ -1,6 +1,7 @@
 import AbstractClass.AbstractSubClass;
 import ChallengeProblems.ArraysAndStrings.OneWay;
 import ChallengeProblems.ArraysAndStrings.PalindromePermutation;
+import ChallengeProblems.ArraysAndStrings.StringCompression;
 import ChallengeProblems.CheckSubtree.CheckSubtree;
 import ChallengeProblems.DijkstrasAlgorithm.DijsktrasAlgorithm;
 import ChallengeProblems.Graphs.*;
@@ -47,7 +48,8 @@ public class main {
 //        CheckSubtree.doTheThing();
 
 //        PalindromePermutation.doTheThing();
-        OneWay.doTheThing();
+//        OneWay.doTheThing();
+        StringCompression.doTheThing();
     }
 
     public static void JavaConcepts() throws InstantiationException, IllegalAccessException {
