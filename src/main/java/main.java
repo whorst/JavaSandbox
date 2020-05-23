@@ -7,6 +7,7 @@ import ChallengeProblems.DijkstrasAlgorithm.DijsktrasAlgorithm;
 import ChallengeProblems.Graphs.*;
 import ChallengeProblems.Recursion.*;
 import ChallengeProblems.Recursion.Stairs;
+import ChallengeProblems.SearchingAndSorting.MergeSort;
 import Interface.InterfaceImplementation;
 import Generics.*;
 import CollectionsTest.*;
@@ -49,7 +50,8 @@ public class main {
 
 //        PalindromePermutation.doTheThing();
 //        OneWay.doTheThing();
-        StringCompression.doTheThing();
+//        StringCompression.doTheThing();
+        MergeSort.doTheThing();
     }
 
     public static void JavaConcepts() throws InstantiationException, IllegalAccessException {

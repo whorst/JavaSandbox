@@ -1,4 +1,4 @@
-package ChallengeProblems;
+package ChallengeProblems.Graphs;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
