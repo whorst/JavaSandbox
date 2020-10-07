@@ -2,7 +2,7 @@ package Generics;
 
 import java.util.ArrayList;
 
-public class Generic {
+public class Generic <T>{
 
     public void typeInference(){
 

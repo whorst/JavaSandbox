@@ -1,0 +1,11 @@
+https://www.infoworld.com/article/2071214/java-101--understanding-java-threads--part-3--thread-scheduling-and-wait-notify.html?
+
+1) A JVM's thread scheduler schedules green threads according to priority—a thread's relative importance,
+which you express as an integer from a well-defined range of values.
+
+2) Typically, a JVM's thread scheduler chooses the highest-priority thread and allows that thread to run until it either
+terminates or blocks. At that time, the thread scheduler chooses a thread of the next highest priority.
+That thread (usually) runs until it terminates or blocks.
+
+3) If, while a thread runs, a thread of higher priority unblocks (perhaps the higher-priority thread's sleep time expired),
+the thread scheduler preempts, or interrupts, the lower-priority thread and assigns the unblocked higher-priority thread to the processor.
