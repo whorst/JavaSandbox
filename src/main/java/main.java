@@ -22,9 +22,9 @@ import java.util.ArrayList;
 
 public class main {
     public static void main(String[] args) throws Exception {
-//        JavaConcepts();
+        JavaConcepts();
 //        Does_Data_Added_To_ArrayList_In_Method_Persist_After_Method_Returns();
-        ChallengeProblems();
+//        ChallengeProblems();
     }
 
     public static void ChallengeProblems() throws Exception {
@@ -57,7 +57,7 @@ public class main {
 //        AnagramSort.doTheThing();
 //        RotatedArraySearch.doTheThing();
 //        SortedSearchNoSize.doTheThing();
-        SparseStrings.doTheThing();
+//        SparseStrings.doTheThing();
     }
 
 
