@@ -1,4 +1,5 @@
 import AbstractClass.AbstractSubClass;
+import AbstractClass.MethodsRunningAParent.Test;
 import ChallengeProblems.ArraysAndStrings.OneWay;
 import ChallengeProblems.ArraysAndStrings.PalindromePermutation;
 import ChallengeProblems.ArraysAndStrings.StringCompression;
@@ -61,56 +62,64 @@ public class main {
     }
 
 
-
     public static void JavaConcepts() throws InstantiationException, IllegalAccessException {
-        abstractClassTest();
-        interfaceTest();
-        genericsTest();
-        collectionsIteratorTest();
-        collectionsIterableTest();
-        collectionsTest();
-        lambdaTest();
-        nonterminalStreamTest();
-        terminalStreamTest();
-        StreamIteratorIteration();
-        CollectorsTest();
+        Check_Abstract_Method_Running();
+//        abstractClassTest();
+//        interfaceTest();
+//        genericsTest();
+//        collectionsIteratorTest();
+//        collectionsIterableTest();
+//        collectionsTest();
+//        lambdaTest();
+//        nonterminalStreamTest();
+//        terminalStreamTest();
+//        StreamIteratorIteration();
+//        CollectorsTest();
     }
-    public static void abstractClassTest(){
-            AbstractSubClass asc = new AbstractSubClass();
-            asc.abstractMethod();
+
+    public static void abstractClassTest() {
+        AbstractSubClass asc = new AbstractSubClass();
+        asc.abstractMethod();
         asc.nonAbstractSubMethod();
     }
-    public static void interfaceTest(){
+
+    public static void interfaceTest() {
         InterfaceImplementation IntImp = new InterfaceImplementation();
         IntImp.myInterfaceMethod();
         IntImp.myOtherInterfaceMethod();
     }
+
     public static void genericsTest() throws IllegalAccessException, InstantiationException {
         Generic gen = new Generic();
         gen.typeInference();
         gen.genericMethods();
         gen.genericClasses();
     }
-    public static void collectionsIteratorTest(){
+
+    public static void collectionsIteratorTest() {
         CollectionsIterator ci = new CollectionsIterator();
         ci.listIterator();
     }
-    public static void collectionsIterableTest(){
+
+    public static void collectionsIterableTest() {
         CollectionsIterable cib = new CollectionsIterable();
         cib.listIteraable();
     }
-    public static void collectionsTest(){
+
+    public static void collectionsTest() {
         RegularCollections regCol = new RegularCollections();
 //        regCol.addToCollection("Adding To Collection");
 //        regCol.transferElementsFromOneCollectionToAnother();
         regCol.listComparableInterface();
 //        regCol.listComparator();
     }
-    public static void lambdaTest(){
+
+    public static void lambdaTest() {
         AnonymousInterfaces lambdas = new AnonymousInterfaces();
         lambdas.lambdaInterfaceOperations();
     }
-    public static void nonterminalStreamTest(){
+
+    public static void nonterminalStreamTest() {
         NonterminalStreams stream = new NonterminalStreams();
 //        stream.nonterminalChainedStreams();
 //        stream.filteredStreams();
@@ -118,12 +127,14 @@ public class main {
 //        stream.peekStreams();
         stream.limitStreams();
     }
+
     public static void terminalStreamTest() {
         TerminalStreams stream = new TerminalStreams();
 //        stream.anyMatch();
         stream.allMatch();
     }
-    public static void StreamIteratorIteration(){
+
+    public static void StreamIteratorIteration() {
         //Iteration with streams is slow if you're using primitives. Otherwise, very fast
         //Iterators are the way to go for iterating over primitives
         TimingStuff t = new TimingStuff();
@@ -133,7 +144,8 @@ public class main {
 //        t.objectStreamIteration(t.createObjectList());
 //        t.stringStreamIteration(t.createStringList());
     }
-    public static void CollectorsTest(){
+
+    public static void CollectorsTest() {
 
         CollectorsTest ct = new CollectorsTest();
         System.out.println(ct.findMapNumbers());
@@ -147,14 +159,20 @@ public class main {
 
 
     }
-    public static void Does_Data_Added_To_ArrayList_In_Method_Persist_After_Method_Returns(){
+
+    public static void Does_Data_Added_To_ArrayList_In_Method_Persist_After_Method_Returns() {
         ArrayList al = new ArrayList();
         al.add(1);
         System.out.println("Before Method call AL Size is " + al.size());
         BMethod(al);
         System.out.println("After Method call AL Size is " + al.size());
     }
-    public static void BMethod(ArrayList al){
+
+    public static void Check_Abstract_Method_Running(){
+        Test.testParent();
+    }
+
+    public static void BMethod(ArrayList al) {
         al.add(1);
         al.add(2);
     }
